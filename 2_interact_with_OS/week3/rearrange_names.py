@@ -3,6 +3,9 @@ import re
 
 name = input("Enter name, devided by ',': ")
 
+# Easier way to rearrange is:
+print(re.sub(r"^([\w .-]*), ([\w .-]*)$", r"\2 \1", "Sheykin, Igor E."))
+
 def rearrange_name(name):
     result = re.search(r"^([\w \.-]*), ([\w \.-]*)$", name)
     if result is None:
